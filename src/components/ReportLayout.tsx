@@ -33,7 +33,7 @@ export const ReportLayout = ({ title, children }: ReportLayoutProps) => {
     try {
       setIsDownloading(true);
       
-      const response = await fetch("http://192.168.1.51:8000/generate-pdf", {
+      const response = await fetch("https://kycai-production.up.railway.app/generate-pdf", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
