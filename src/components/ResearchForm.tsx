@@ -48,7 +48,7 @@ const ResearchForm = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch("http://192.168.1.51:8000/research", {
+      const response = await fetch("https://kyc-api.up.railway.app/research", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -67,7 +67,7 @@ const ResearchForm = () => {
     const jobId = data.job_id;
       
  
-    const ws = new WebSocket(`ws://192.168.1.51:8000/research/ws/${jobId}`);
+    const ws = new WebSocket(`wss://https://kyc-api.up.railway.app/research/ws/${jobId}`);
     
     ws.onopen = () => {
       console.log("✅ WebSocket connection opened.");
