@@ -67,7 +67,7 @@ const ResearchForm = () => {
     const jobId = data.job_id;
       
  
-    const ws = new WebSocket(`wss://https://kyc-api.up.railway.app/research/ws/${jobId}`);
+    const ws = new WebSocket("wss://kyc-api.up.railway.app/research/ws/${jobId}");
     
     ws.onopen = () => {
       console.log("✅ WebSocket connection opened.");

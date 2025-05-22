@@ -33,7 +33,11 @@ export const ReportLayout = ({ title, children }: ReportLayoutProps) => {
     try {
       setIsDownloading(true);
       
+<<<<<<< HEAD
       const response = await fetch("https://kyc-api.up.railway.app/generate-pdf", {
+=======
+      const response = await fetch("https://kycai-production.up.railway.app/generate-pdf", {
+>>>>>>> 3b3a8d2d027088337f3e837060a17bb2d1071db6
         method: "POST",
         headers: {
           "Content-Type": "application/json",
